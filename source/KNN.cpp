@@ -67,10 +67,7 @@ int Knn(int a,int b,double *values,double *test)
 	vector<double> ans3;
 	for (int i = 0; i < a; ++i)
 	{
-		for (int j = 0; j < b; ++j)
-		{
-			ans[i][j] = ((*(test + i) - *(values + i * b + j)) * (*(test + i) - *(values + i * b + j)));
-		}
+		for (int j = 0; j < b; ++j) ans[i][j] = ((*(test + i) - *(values + i * b + j)) * (*(test + i) - *(values + i * b + j)));
 	}	
 	for (int i = 0; i < a; ++i)
 	{
