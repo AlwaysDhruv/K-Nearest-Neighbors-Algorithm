@@ -66,16 +66,10 @@ int Knn(int a,int b,double *values,double *test)
 	int clss[b],ct=0;
 	vector<double> ans3;
 	for (int i = 0; i < a; ++i)
-	{
 		for (int j = 0; j < b; ++j) ans[i][j] = ((*(test + i) - *(values + i * b + j)) * (*(test + i) - *(values + i * b + j)));
-	}	
 	for (int i = 0; i < a; ++i)
-	{
 		for (int j = 0; j < b; ++j)
-		{
 			ans2.push_back(ans[i][j] + ans[i+1][j]);
-		}
-	}
 	for (int i = 0; i < ans2.size()/a; ++i)
 	{
 		ans3.push_back(sqrt(ans2[i])); 
